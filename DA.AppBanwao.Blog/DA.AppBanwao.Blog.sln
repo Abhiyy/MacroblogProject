@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA.AppBanwao.Blog", "DA.AppBanwao.Blog\DA.AppBanwao.Blog.csproj", "{EB958049-30A3-4060-8C28-8B9B48BD35EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA.AppBanwao.Blog.UI", "DA.AppBanwao.Blog\DA.AppBanwao.Blog.UI.csproj", "{EB958049-30A3-4060-8C28-8B9B48BD35EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA.AppBanwao.API", "DA.AppBanwao.API\DA.AppBanwao.API.csproj", "{D1244842-1487-4740-824B-F44FEA6714B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA.AppBanwao.Blog.DataLayer", "DA.AppBanwao.Blog.DataLayer\DA.AppBanwao.Blog.DataLayer.csproj", "{C7D4277F-B288-4548-A80D-B68B96D81563}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,14 @@ Global
 		{EB958049-30A3-4060-8C28-8B9B48BD35EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB958049-30A3-4060-8C28-8B9B48BD35EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB958049-30A3-4060-8C28-8B9B48BD35EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1244842-1487-4740-824B-F44FEA6714B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1244842-1487-4740-824B-F44FEA6714B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1244842-1487-4740-824B-F44FEA6714B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1244842-1487-4740-824B-F44FEA6714B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D4277F-B288-4548-A80D-B68B96D81563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D4277F-B288-4548-A80D-B68B96D81563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D4277F-B288-4548-A80D-B68B96D81563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D4277F-B288-4548-A80D-B68B96D81563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
