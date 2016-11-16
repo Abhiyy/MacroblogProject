@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MacroBlogModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MacroBlogEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="AppSettings" EntityType="MacroBlogModel.AppSetting" />
+    <EntitySet Name="Cities" EntityType="MacroBlogModel.City" />
+    <EntitySet Name="Countries" EntityType="MacroBlogModel.Country" />
+    <EntitySet Name="Roles" EntityType="MacroBlogModel.Role" />
+    <EntitySet Name="UserDetails" EntityType="MacroBlogModel.UserDetail" />
+    <EntitySet Name="UserLogins" EntityType="MacroBlogModel.UserLogin" />
+    <EntitySet Name="Users" EntityType="MacroBlogModel.User" />
+  </EntityContainer>
+  <EntityType Name="AppSetting">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Value" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Type="Int32" Name="CityID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Type="Int32" Name="CountryID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="DetailsID" />
+    </Key>
+    <Property Type="Int64" Name="DetailsID" Nullable="false" />
+    <Property Type="Int64" Name="UserID" />
+    <Property Type="String" Name="FirstName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AddressLine1" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AddressLine2" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LandMark" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Mobile" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CityID" />
+    <Property Type="Int32" Name="StateID" />
+    <Property Type="Int32" Name="CountryID" />
+    <Property Type="String" Name="Pincode" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="LoginID" />
+    </Key>
+    <Property Type="Int64" Name="LoginID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="UserID" />
+    <Property Type="String" Name="Token" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LoginTime" Precision="3" />
+    <Property Type="DateTime" Name="ActiveTill" Precision="3" />
+    <Property Type="DateTime" Name="ActualLogOut" Precision="3" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Int64" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Username" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UserType" />
+    <Property Type="Int32" Name="RoleID" />
+    <Property Type="Boolean" Name="Active" />
+    <Property Type="DateTime" Name="CreatedDate" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+  </EntityType>
+</Schema>

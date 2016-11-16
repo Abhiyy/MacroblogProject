@@ -13,10 +13,10 @@ namespace DA.AppBanwao.Blog.DataLayer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MacroBlogEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public MacroBlogEntities()
-            : base("name=MacroBlogEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -25,5 +25,13 @@ namespace DA.AppBanwao.Blog.DataLayer
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<AppSetting> AppSettings { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<State> States { get; set; }
+        public DbSet<UserDetail> UserDetails { get; set; }
+        public DbSet<UserLogin> UserLogins { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

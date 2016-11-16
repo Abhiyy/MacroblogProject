@@ -1,0 +1,10 @@
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\bin\Debug\DA.AppBanwao.Blog.DataLayer.dll.config
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\bin\Debug\DA.AppBanwao.Blog.DataLayer.dll
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\bin\Debug\DA.AppBanwao.Blog.DataLayer.pdb
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\bin\Debug\EntityFramework.dll
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\bin\Debug\EntityFramework.xml
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\obj\Debug\DA.AppBanwao.Blog.DataLayer.csprojResolveAssemblyReference.cache
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\obj\Debug\DA.AppBanwao.Blog.DataLayer.dll
+D:\My work\DA work\Repos\BlogProject\MacroblogProject\DA.AppBanwao.Blog\DA.AppBanwao.Blog.DataLayer\obj\Debug\DA.AppBanwao.Blog.DataLayer.pdb

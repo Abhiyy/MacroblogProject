@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MacroBlogModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MacroBlogModelStoreContainer">
+    <EntitySet Name="AppSettings" EntityType="MacroBlogModel.Store.AppSettings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cities" EntityType="MacroBlogModel.Store.Cities" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Countries" EntityType="MacroBlogModel.Store.Countries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Roles" EntityType="MacroBlogModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserDetails" EntityType="MacroBlogModel.Store.UserDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserLogins" EntityType="MacroBlogModel.Store.UserLogins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="MacroBlogModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="AppSettings">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Value" Type="varchar" MaxLength="1000" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="CountryID" />
+    </Key>
+    <Property Name="CountryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UserDetails">
+    <Key>
+      <PropertyRef Name="DetailsID" />
+    </Key>
+    <Property Name="DetailsID" Type="bigint" Nullable="false" />
+    <Property Name="UserID" Type="bigint" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="300" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="200" />
+    <Property Name="LandMark" Type="varchar" MaxLength="150" />
+    <Property Name="Email" Type="varchar" MaxLength="300" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="StateID" Type="int" />
+    <Property Name="CountryID" Type="int" />
+    <Property Name="Pincode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="UserLogins">
+    <Key>
+      <PropertyRef Name="LoginID" />
+    </Key>
+    <Property Name="LoginID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="bigint" />
+    <Property Name="Token" Type="varchar(max)" />
+    <Property Name="LoginTime" Type="datetime" />
+    <Property Name="ActiveTill" Type="datetime" />
+    <Property Name="ActualLogOut" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="UserType" Type="int" />
+    <Property Name="RoleID" Type="int" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'MacroBlog.dbo.States' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="States">
+        <Property Name="StateID" Type="int" />
+        <Property Name="Name" Type="varchar" MaxLength="250" />
+      </EntityType>-->
+</Schema>
